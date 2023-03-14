@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>QType</title>
+        {% load static %}
+        <link rel = "stylesheet" href = "{% static 'typingsite/styles.css' %}">
+        <link rel="icon" href="{% static 'typingsite/typewriter.png' %} ">
+    </head>
+    <body class = "body">
+
+        <nav>
+            <ul>
+                <li style = "float:left;" class = "list"><a class = "listlinks" href = "https://qsamms.github.io/TypingSite/">QType</a></li>
+                <li class = "list"><a class = "listlinks" href = "https://quinnsamms.com">Quinn Samms</a></li>
+            </ul>
+        </nav>
+
+        <div class = "header">
+            <h1>Test your typing skills</h1>
+            <div id = "selection" class = "selectionarea">
+                <div class = "helper">
+                    <div class = "numwords">
+                        Number of Words
+                    </div>
+                    <div class = "nums">
+                        <div class = "selectionlist"><span id = "time10">10</span></div>
+                        <div class = "selectionlist"><span id = "time25">25</span></div>
+                        <div class = "selectionlist"><span id = "time50">50</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class = "typingarea">
+            <div class = "textholder">
+                <div id = "text" class = "text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere dolor non sem consectetur, 
+                    sit amet fermentum dui rhoncus. Vestibulum sodales maximus mauris, tempus hendrerit risus tristique at. 
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    Nunc sed tristique turpis, nec varius nulla. Maecenas porta.
+                </div>
+            </div>
+            <div class = "input">
+                <input id = "userinput" class = "typinginput" readonly value = "Click below to start your first race" onkeypress = "myKeyPress(event)" onkeydown = "myKeyDown(event)">
+                <button id = "request" class = "playbutton">Let's Race!</button> 
+            </div>
+        </div>
+
+        <div id = "data" class = "data">
+            <div class = "wpmandaccuracy">
+                <div class = "wpm">
+                    Your WPM:
+                </div>
+                <div id = "wpm" class = "wpmdisplay">
+                    80
+                </div>
+                <div class = "accuracy">
+                    Accuracy:
+                </div>
+                <div id = "accuracy" class = "accuracydisplay">
+                    96%
+                </div>
+            </div>
+            <div class = "timeandwords">
+                <div class = "tophalf">
+                    <div class = "time">
+                        Time Elapsed: 
+                    </div>
+                    <div id = "time" class = "timedisplay">
+                        15 seconds
+                    </div>
+                </div>
+                <div class = "bottomhalf">
+                    <div class = "words">
+                        Words/Characers:
+                    </div>
+                    <div id = "words" class = "wordsdisplay">
+                        10/100
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src = "{% static 'typingsite/index.js' %}"></script>
+    </body>
+</html>

@@ -1,0 +1,269 @@
+.body{
+    background-color:lightblue;
+    overflow-x:hidden;
+}
+
+.header{
+    display:block;
+    background:transparent;
+    text-align:center;
+    position:relative;
+    left:-10px;
+    top:60px;
+    width:100%;
+    height:70px;
+    margin-bottom:130px;
+    padding:20px;
+}
+
+.nums{
+    display:flex;
+}
+
+.helper{
+    background:rgba(255, 255, 255, 0.5);
+    height:50px;
+    border-radius:7px;
+    margin: 0px auto;
+}
+
+.numwords{
+    display:block;
+    margin:5px;
+}
+
+.typingarea{
+    background-color:rgba(255, 255, 255, 0.5);
+    display:block;
+    margin: 50px auto;
+    width:50%;
+    min-height:150px;
+    border-radius:20px;
+}
+
+
+.textholder{
+    display:block;
+    width:100%;
+    height:70%;
+    opacity:.5;
+    border-radius:20px;
+    /*border:2px solid black;*/
+}
+
+.text{
+    top:20px;
+    border-radius:20px;
+    margin:25px auto;
+    /*border: 2px solid black;*/
+    min-width:90%;
+    min-height:90%;
+    max-width:90%;
+    max-height:500px;
+    font-size:22px;
+    line-height:50px;
+    word-wrap:break-word;
+    overflow:hidden;
+}
+
+.text span{
+    color: green;
+}
+
+.input{
+    display:block;
+    position:relative;
+    height:30%;
+    border-radius:20px;
+}
+
+.typinginput{
+    border-radius:20px;
+    height:40px;
+    width:95%;
+    opacity:1;
+    margin:5px;
+    font-size:22px;
+}
+
+.playbutton{
+    width:200px;
+    height:50px;
+    border-radius:20px;
+    border:2px solid black;
+    background-color: lightgreen;
+    cursor:pointer;
+    margin:5px;
+}
+
+.data{
+    display:none;
+    top:500px;
+    /*border: 2px solid black;*/
+    width:40%;
+    height:200px;
+    margin:auto;
+}
+
+.wpmandaccuracy{
+    display:block;
+    height:100%;
+    border-radius:20px;
+    min-width:40%;
+    background-color:rgba(255, 255, 255, 0.5);
+    margin-left:50px;
+}
+
+.wpm{
+    padding-top:5px;
+    text-align:center;
+    font-size:20px;
+}
+
+.wpmdisplay{
+    height:50%;
+    text-align:center;
+    font-size: 100px;
+}
+
+.accuracy{
+    text-align:center;
+    font-size:20px;
+    padding-top:10px;
+}
+
+.accuracydisplay{
+    height:50%;
+    text-align:center;
+    font-size: 20px;
+    padding-top:5px;
+}
+
+.timeandwords{
+    display:block;
+    height:100%;
+    border-radius:20px;
+    min-width:40%;
+    background-color:rgba(255, 255, 255, 0.5);
+    margin-left:50px;
+}
+
+.time{
+    padding-top:5px;
+    text-align:center;
+    font-size:20px;
+}
+
+.timedisplay{
+    height:50%;
+    text-align:center;
+    font-size: 30px;
+    padding-top:10px;
+}
+
+.words{
+    text-align:center;
+    font-size:20px;
+}
+
+.wordsdisplay{
+    height:50%;
+    text-align:center;
+    font-size: 30px;
+    padding-top:10px;
+}
+
+.tophalf{
+    height:50%;
+    padding-top:10px;
+}
+
+
+.bottomhalf{
+    height:50%;
+}
+
+
+/*styles for navbar*/
+
+.selectionarea{
+    margin: 0px auto;
+    /*border: 2px solid black;*/
+    display:flex;
+    align-content:center;
+    text-align:center;
+}
+
+.selectionlist{
+    display:grid;
+    grid-auto-flow:column;
+    margin: 0px 15px;;
+    align-content:center;
+    cursor:pointer;
+    grid-auto-flow:column;
+    text-align:center;
+}
+
+.list{
+    float:right;
+    display: block;
+    opacity:.9;
+    border-radius:20px;
+    margin:10px;
+    color:white;
+    text-align:center;
+    padding: 15px 20px;
+    text-decoration:none;
+}
+
+.listlinks{
+    color:white;
+    text-decoration:none;
+}
+
+.listlinks:visited{
+    color:white;
+}
+
+.listlinks:hover{
+    color:rgb(30, 104, 168);
+}
+
+.listlinks span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+}
+  
+.listlinks span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -10px;
+    transition: 0.3s;
+}
+  
+.listlinks:hover span {
+    padding-right: 15px;
+}
+  
+.listlinks:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+ul{
+    z-index: 1;
+    list-style-type: none;
+    position:fixed;
+    margin:0;
+    height: 70px;
+    left:0px;
+    padding:0px;
+    background-color: rgb(2, 2, 49);
+    background-size:contain;
+    width:100%;
+    top: 0px;
+}
