@@ -1,10 +1,12 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('',views.index, name = 'index'),
+    path('',views.get_homepage, name = 'homepage'),
     #path('<int:user_id>/',views.userstats,name = 'userstats'),
-    path('post/',views.post_request,name =' posthandler'),
-    path('get/',views.get_reqeust, name = 'gethandler')
+    path('post/',views.post_request, name =' posthandler'),
+    path('get/',views.get_request, name = 'gethandler'),
+    path('', include('django.contrib.auth.urls')),
+    path('home',views.get_homepage, name = 'homepage'),
+    path('sign-up',views.sign_up, name = 'sign-up'),
 ]
-

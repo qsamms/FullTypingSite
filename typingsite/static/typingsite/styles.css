@@ -184,11 +184,10 @@
 }
 
 
-/*styles for navbar*/
+/*styles for navbar */
 
 .selectionarea{
     margin: 0px auto;
-    /*border: 2px solid black;*/
     display:flex;
     align-content:center;
     text-align:center;
@@ -254,6 +253,8 @@
     right: 0;
 }
 
+
+/*
 ul{
     z-index: 1;
     list-style-type: none;
@@ -267,3 +268,5 @@ ul{
     width:100%;
     top: 0px;
 }
+
+*/

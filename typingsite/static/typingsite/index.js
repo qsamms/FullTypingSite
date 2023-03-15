@@ -40,11 +40,10 @@ async function backendPost(){
             console.log(this.responseText)
         }
     }
-    requestObj.open("POST", '/typingsite/post/')
+    requestObj.open("POST", '/home/post/')
     requestObj.setRequestHeader('X-CSRFToken',csrftoken)
     const formdata = new FormData()
-    formdata.append('speed','90')
-    formdata.append('user_id','100')
+    formdata.append('speed',wpm)
     requestObj.send(formdata)
 }
 
@@ -88,7 +87,6 @@ async function startGame(){
     resetGame(false);
     await makeRequest();
     setEditable(document.getElementById("userinput"));
-    await backendPost()
 }
 
 document.getElementById("request").addEventListener("click", startGame);
@@ -110,6 +108,7 @@ async function resetGame(end){
     if(end){
         calculateData();
         displayData();
+        await backendPost()
         game = false;
     }else{
         document.getElementById("data").style.display = "none";
