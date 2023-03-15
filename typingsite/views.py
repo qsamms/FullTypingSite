@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth import login
+from django.template import loader
 from .forms import RegisterForm
 from .models import Game
 
@@ -18,6 +19,20 @@ def post_request(request):
             return HttpResponse("data saved")
     else:
         return HttpResponse("no user logged in")
+
+def userstats(request):
+    template = loader.get_template('typingsite/userstats.html')
+    games = Game.objects.filter(user_id = request.user)
+    gamelist = list(games)
+    wpmlist = []
+    for game in gamelist:
+        wpmlist.append(game.speed)
+    average = sum(wpmlist) / len(wpmlist)
+    formattedAverage = "{:.1f}".format(average)
+    context = {
+        'averagewpm': formattedAverage
+    }
+    return HttpResponse(template.render(context,request))
 
 def get_request(request):
     if request.user.is_authenticated:

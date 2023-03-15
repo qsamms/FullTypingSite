@@ -1,0 +1,13 @@
+{% extends 'typingsite/base.html' %}
+{%block title %}User stats{% endblock %}
+{%load static%}
+{%block content%}
+<div class = "header">
+    <h1>
+        {{user.username}} 's stats
+    </h1>
+
+    <h3>Average WPM: {{averagewpm}}</h3>
+</div>
+{%endblock%}
+

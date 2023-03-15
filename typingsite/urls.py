@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     path('',views.get_homepage, name = 'homepage'),
-    #path('<int:user_id>/',views.userstats,name = 'userstats'),
+    path('userstats/',views.userstats,name = 'userstats'),
     path('post/',views.post_request, name =' posthandler'),
     path('get/',views.get_request, name = 'gethandler'),
     path('', include('django.contrib.auth.urls')),

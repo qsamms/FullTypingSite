@@ -22,7 +22,9 @@
             <div>
                 <ul class = "navbar-nav">
                     {%if user.is_authenticated%}
-                    <span class = "navbar-text">{{user.username}} | </span>
+                    <li class = "nav-item">
+                        <a class = "nav-link" href = "/home/userstats/">{{user.username}}  |</a>
+                    </li>
                     <li class = "nav-item">
                         <a class = "nav-link" href = "/home/logout/">Logout</a>
                     </li>
