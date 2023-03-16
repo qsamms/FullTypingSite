@@ -16,6 +16,19 @@
     padding:20px;
 }
 
+.statsheader{
+    display:block;
+    background:transparent;
+    text-align:center;
+    position:relative;
+    left:-10px;
+    top:10px;
+    width:100%;
+    height:70px;
+    margin-bottom:130px;
+    padding:20px;
+}
+
 .nums{
     display:flex;
 }
@@ -78,7 +91,7 @@
 }
 
 .typinginput{
-    border-radius:20px;
+    border-radius:15px;
     height:40px;
     width:95%;
     opacity:1;
@@ -89,7 +102,7 @@
 .playbutton{
     width:200px;
     height:50px;
-    border-radius:20px;
+    border-radius:15px;
     border:2px solid black;
     background-color: lightgreen;
     cursor:pointer;
@@ -270,6 +283,10 @@
     margin:20px;
     background-color:lightgrey;
     border-radius: 10px;
+}
+
+.playbutton:hover{
+    background-color: rgb(107, 183, 107);
 }
 
 /*
