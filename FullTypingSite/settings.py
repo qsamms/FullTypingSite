@@ -133,3 +133,6 @@ LOGIN_REDIRECT_URL = '/home'
 
 LOGOUT_REDIRECT_URL = '/home/login'
 
+ALLOWED_HOSTS[
+    '54.219.164.0'
+]
