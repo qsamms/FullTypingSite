@@ -253,6 +253,24 @@
     right: 0;
 }
 
+.profile{
+    text-align:left;
+    background-color:lightgrey;
+    border-radius:20px;
+}
+
+.stats-inside-text{
+    position:relative;
+    left:10px;
+}
+
+.gameinfo{
+    text-align:left;
+    /*border:2px solid black; */
+    margin:20px;
+    background-color:lightgrey;
+    border-radius: 10px;
+}
 
 /*
 ul{

@@ -3,11 +3,55 @@
 {%load static%}
 {%block content%}
 <div class = "header">
-    <h1>
-        {{user.username}} 's stats
-    </h1>
-
-    <h3>Average WPM: {{averagewpm}}</h3>
+    <div class="row">
+        <div class="col-sm-4" style = "margin-right:80px;">
+            <div class = "profile">
+                <div class = "stats-inside-text">
+                    <h1>Profile</h1>
+                    <p>First name: {{user.first_name}}</p>
+                    <p>Last name: {{user.last_name}}</p>
+                    <p>Username: {{user.username}}</p>
+                    <p>Email: {{user.email}}</p>
+                    <p>Member since: {{user.date_joined}}</p>
+                    <p>Change Password <a href = "/home/password_change/">Here</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div>
+                <h1>{{user.username}} 's stats</h1>
+                <p>Total Games played: {{numgames}}</p>
+                <p>Cumulative Average WPM: {{averagewpm}}</p>
+            </div>
+        
+            <div class = "gameinfo">
+                <div class = "stats-inside-text">
+                    <p>10 word games:</p>
+                    <p>games played: {{tenGames}}<p>
+                    <p>average wpm: {{tenAvg}}</p>
+                    <p>best wpm: {{tenBest}}</p>
+                </div>
+            </div>
+        
+            <div class = "gameinfo">
+                <div class = "stats-inside-text">
+                    <p>25 word games</p>
+                    <p>games played: {{twentyfiveGames}}</p>
+                    <p>average wpm: {{twentyfiveAvg}}</p>
+                    <p>best wpm: {{twentyfiveBest}}</p>
+                </div>
+            </div>
+        
+            <div class = "gameinfo">
+                <div class = "stats-inside-text">
+                    <p>50 word games</p>
+                    <p>games played: {{fiftyGames}}</p>
+                    <p>average wpm: {{fiftyAvg}}</p>
+                    <p>best wpm: {{fiftyBest}}</p>
+                </div>
+            </div>
+        </div>
+      </div>
 </div>
 {%endblock%}
 

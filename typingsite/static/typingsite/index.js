@@ -34,17 +34,18 @@ function getCookie(name) {
 const csrftoken = getCookie('csrftoken');
 
 async function backendPost(){
-    const requestObj = new XMLHttpRequest()
+    const requestObj = new XMLHttpRequest();
     requestObj.onreadystatechange = function() {
         if(this.readyState == 4 && this.status == 200){
-            console.log(this.responseText)
+            console.log(this.responseText);
         }
     }
-    requestObj.open("POST", '/home/post/')
-    requestObj.setRequestHeader('X-CSRFToken',csrftoken)
-    const formdata = new FormData()
-    formdata.append('speed',wpm)
-    requestObj.send(formdata)
+    requestObj.open("POST", '/home/post/');
+    requestObj.setRequestHeader('X-CSRFToken',csrftoken);
+    const formdata = new FormData();
+    formdata.append('speed',wpm);
+    formdata.append('numwords',numWords);
+    requestObj.send(formdata);
 }
 
 async function apiCall(){
@@ -108,7 +109,7 @@ async function resetGame(end){
     if(end){
         calculateData();
         displayData();
-        await backendPost()
+        await backendPost();
         game = false;
     }else{
         document.getElementById("data").style.display = "none";
